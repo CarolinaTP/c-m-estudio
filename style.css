@@ -1,16 +1,22 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #faf4ee; /* Color crema */
+}
+
+/*Desplazamiento suave hasta la sección correspondiente*/
+html {
+    scroll-behavior: smooth;
 }
 
 /* Sección Hero */
 .hero {
-    background: url('img/fondo.jpg') no-repeat center center/cover;
+    background: url('img/portada.png') no-repeat center center/cover;
     height: 90vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: left;
+    text-align: left;
     position: relative;
 }
 
@@ -27,15 +33,18 @@ body {
 .hero .container {
     position: relative;
     z-index: 2;
+    
 }
 
 .hero h1 {
     font-size: 3rem;
     font-weight: bold;
+   
 }
 
 .hero p {
     font-size: 1.5rem;
+  
 }
 
 .hero .btn {
@@ -43,3 +52,16 @@ body {
     font-size: 1.2rem;
     padding: 10px 20px;
 }
+
+/* Sección acerca */
+#acerca h2 {
+    color: #2c2c2c;
+}
+
+#acerca img {
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección eventos-bodas */
+
