@@ -4,6 +4,12 @@ body {
     background-color: #faf4ee; /* Color crema */
 }
 
+/*Color de barra de navegación*/
+.bg-dark {
+    background-color: #222022 !important;
+}
+
+
 /*Desplazamiento suave hasta la sección correspondiente*/
 html {
     scroll-behavior: smooth;
@@ -63,5 +69,149 @@ html {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Sección eventos-bodas */
+/* Sección Bodas */
+.bodas-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bodas-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover para agrandar la imagen */
+.bodas-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Marco con opacidad */
+.bodas-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border: 8px solid #222022; /* Borde translúcido */
+    box-sizing: border-box;
+}
+
+/* Texto inicial abajo */
+.bodas-card .card-body {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Texto en el centro al hacer hover */
+.bodas-card:hover .card-body {
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/* Mostrar el marco con opacidad al hacer hover */
+.bodas-card:hover::after {
+    opacity: 1;
+}
+
+/* Estilos del texto con sombra */
+.bodas-card h5, 
+.bodas-card p {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Sombra negra difuminada */
+}
+
+/* Sección compromisos */
+.compromisos-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.compromisos-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover para agrandar la imagen */
+.compromisos-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Marco con opacidad */
+.compromisos-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border: 8px solid #222022; /* Borde translúcido */
+    box-sizing: border-box;
+}
+
+/* Texto inicial abajo */
+.compromisos-card .card-body {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Texto en el centro al hacer hover */
+.compromisos-card:hover .card-body {
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/* Mostrar el marco con opacidad al hacer hover */
+.compromisos-card:hover::after {
+    opacity: 1;
+}
+
+/* Estilos del texto con sombra */
+.compromisos-card h5, 
+.compromisos-card p {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Sombra negra difuminada */
+}
+
+/* Ajustes del carrusel */
+#compromisosCarousel {
+    max-width: 600px;
+    margin: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+
+
 
