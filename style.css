@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #faf4ee; /* Color crema */
+    background-color: #faf4ee; 
 }
 
 /*Color de barra de navegación*/
@@ -199,19 +199,136 @@ html {
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Sombra negra difuminada */
 }
 
-/* Ajustes del carrusel */
-#compromisosCarousel {
-    max-width: 600px;
+/* Estilos del boda1.html */
+/* Fondo opaco al abrir imagen */
+ /* Modal */
+ .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 📌 Mostrar modal con :target */
+.modal:target {
+    display: flex;
+}
+
+.modal img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+ /*Botón cerrar */
+ .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transform: translateY(-50%);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Estilos de la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 10px; /* Espacio entre imágenes */
+    max-width: 800px; /* Ajusta según necesidad */
     margin: auto;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    padding: 10px;
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); /* 1 imagen por fila en pantallas muy pequeñas */
+    }
 }
 
 
+/* Overlay con texto */
+.overlay-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 18px;
+}
+
+.overlay-container:hover .overlay {
+    opacity: 1;
+}
+
+/* personalización del carrusel */
+.carousel {
+    max-width: 1120px; /* Ajusta el tamaño del carrusel */
+    margin: 50px auto; /* Centra el carrusel */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Para evitar bordes cuadrados */
+}
+
+.carousel img {
+    object-fit: cover;
+    height: 500px; 
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* seccion contactos */
 
 
