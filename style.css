@@ -1,21 +1,20 @@
-/* Estilos generales */
+/* estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #faf4ee; 
+    background-color: #f9ebdb; 
 }
 
-/*Color de barra de navegación*/
+/*color de barra de navegación*/
 .bg-dark {
     background-color: #222022 !important;
 }
 
-
-/*Desplazamiento suave hasta la sección correspondiente*/
+/*desplazamiento suave hasta la sección correspondiente*/
 html {
     scroll-behavior: smooth;
 }
 
-/* Sección Hero */
+/* sección hero */
 .hero {
     background: url('img/portada.png') no-repeat center center/cover;
     height: 90vh;
@@ -33,24 +32,21 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Capa de oscuridad */
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .hero .container {
     position: relative;
     z-index: 2;
-    
 }
 
 .hero h1 {
     font-size: 3rem;
     font-weight: bold;
-   
 }
 
 .hero p {
     font-size: 1.5rem;
-  
 }
 
 .hero .btn {
@@ -83,12 +79,10 @@ html {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Efecto hover para agrandar la imagen */
 .bodas-card:hover img {
     transform: scale(1.05);
 }
 
-/* Marco con opacidad */
 .bodas-card::after {
     content: "";
     position: absolute;
@@ -96,14 +90,13 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen */
+    background: rgba(0, 0, 0, 0.4);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    border: 8px solid #222022; /* Borde translúcido */
+    border: 8px solid #222022;
     box-sizing: border-box;
 }
 
-/* Texto inicial abajo */
 .bodas-card .card-body {
     position: absolute;
     bottom: 10px;
@@ -114,27 +107,24 @@ html {
     transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* Texto en el centro al hacer hover */
 .bodas-card:hover .card-body {
     bottom: 50%;
     transform: translate(-50%, 50%);
 }
 
-/* Mostrar el marco con opacidad al hacer hover */
 .bodas-card:hover::after {
     opacity: 1;
 }
 
-/* Estilos del texto con sombra */
 .bodas-card h5, 
 .bodas-card p {
     color: white;
     font-weight: bold;
     margin: 0;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Sombra negra difuminada */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-/* Sección compromisos */
+/* sección compromisos */
 .compromisos-card {
     position: relative;
     overflow: hidden;
@@ -148,12 +138,10 @@ html {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Efecto hover para agrandar la imagen */
 .compromisos-card:hover img {
     transform: scale(1.05);
 }
 
-/* Marco con opacidad */
 .compromisos-card::after {
     content: "";
     position: absolute;
@@ -161,14 +149,13 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Oscurece la imagen */
+    background: rgba(0, 0, 0, 0.4);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    border: 8px solid #222022; /* Borde translúcido */
+    border: 8px solid #222022;
     box-sizing: border-box;
 }
 
-/* Texto inicial abajo */
 .compromisos-card .card-body {
     position: absolute;
     bottom: 10px;
@@ -179,29 +166,24 @@ html {
     transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-/* Texto en el centro al hacer hover */
 .compromisos-card:hover .card-body {
     bottom: 50%;
     transform: translate(-50%, 50%);
 }
 
-/* Mostrar el marco con opacidad al hacer hover */
 .compromisos-card:hover::after {
     opacity: 1;
 }
 
-/* Estilos del texto con sombra */
 .compromisos-card h5, 
 .compromisos-card p {
     color: white;
     font-weight: bold;
     margin: 0;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8); /* Sombra negra difuminada */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-/* Estilos del boda1.html */
-/* Fondo opaco al abrir imagen */
- /* Modal */
+/* estilos del bodas y compromisos.html */
  .modal {
     display: none;
     position: fixed;
@@ -215,7 +197,6 @@ html {
     flex-direction: column;
 }
 
-/* 📌 Mostrar modal con :target */
 .modal:target {
     display: flex;
 }
@@ -226,7 +207,6 @@ html {
     border-radius: 10px;
 }
 
- /*Botón cerrar */
  .close {
     position: absolute;
     top: 20px;
@@ -236,7 +216,6 @@ html {
     text-decoration: none;
 }
 
-/* Botones de navegación */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -252,40 +231,38 @@ html {
 .prev { left: 20px; }
 .next { right: 20px; }
 
-/* Estilos de la galería */
+/* estilos de la galería */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 10px; /* Espacio entre imágenes */
-    max-width: 800px; /* Ajusta según necesidad */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    max-width: 800px;
     margin: auto;
 }
 
 .gallery img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Bordes redondeados opcionales */
+    border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 imágenes por fila en pantallas pequeñas */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
 @media (max-width: 480px) {
     .gallery {
-        grid-template-columns: repeat(1, 1fr); /* 1 imagen por fila en pantallas muy pequeñas */
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
-
-/* Overlay con texto */
 .overlay-container {
     position: relative;
     display: inline-block;
@@ -313,10 +290,10 @@ html {
 
 /* personalización del carrusel */
 .carousel {
-    max-width: 1120px; /* Ajusta el tamaño del carrusel */
-    margin: 50px auto; /* Centra el carrusel */
-    border-radius: 10px; /* Bordes redondeados */
-    overflow: hidden; /* Para evitar bordes cuadrados */
+    max-width: 1120px; 
+    margin: 50px auto; 
+    border-radius: 10px; 
+    overflow: hidden; 
 }
 
 .carousel img {
@@ -329,6 +306,35 @@ html {
     filter: invert(1);
 }
 
-/* seccion contactos */
+/* sección footer */
+.footer1{
+    width: 100%;
+    height: 450px;
+    background-image: url('./img/final.png');
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 20px;
+    
+}
 
+.text-overlay {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
 
+.footerinfo{
+    margin: 10px 100px 10px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.footerinfo div{
+    padding: 10px;
+}
